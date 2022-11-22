@@ -9,6 +9,7 @@
                         <input v-model="email" class="border-2 mb-2 w-[300px] h-[45px] p-2" type="email" name="email" id="login-email" placeholder="Email"><br>
                         <input v-model="password" class="border-2 mb-5 w-[300px] h-[45px] p-2" type="password" name="password" id="login-password" placeholder="Password"><br>
                         <button class="bg-sky-500 w-[300px] h-[45px] rounded-lg mb-3">Sign in</button>
+
                       </form>
                     </div>  
                 </div>
@@ -23,12 +24,16 @@ export default {
         return {
             email: "",
             password: "",
+            name: "",
+            age:0,
         }
     },
+
     methods: {
         async signin() {
             await useUserStore().signIn(this.email, this.password)
-            console.log(useUserStore().getUser)
+            console.log(useUserStore().getUser.uid)
+            this.$.router.push('')
         },
 
     }
