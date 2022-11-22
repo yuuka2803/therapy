@@ -2,7 +2,9 @@
     <div style="font-family: 'Noto Sans Thai', sans-serif;">
         <div  class="flex bg-slate-200 h-[100px] ">
             <div class="flex-none w-1/2">
-                <img src="https://i.postimg.cc/90P1DKCM/logo-stroke.png" width="125" class="m-2">
+                <router-link to="/">
+                    <img src="https://i.postimg.cc/SNcM8YC8/logo-depositphotos-bgremover-1.png" width="170" class="m-3">
+                </router-link>
             </div>
             <div class="flex-none w-1/2 text-xl">
                 <div class="flex items-stretch justify-end">
@@ -14,7 +16,7 @@
                     <div class="flex-none text-blue-800 font-semibold w-[150px] h-[100px] flex justify-center items-center ">
                         <buttom>บันทึกข้อมูล</buttom>
                     </div>
-                    <router-link to="/">
+                    <router-link to="/signin">
                         <div class="flex-none mr-5 w-[150px] h-[100px] flex justify-center items-center ">
                             <buttom class="p-1 w-[105px] text-center border-2 border-black rounded-full">LOG IN</buttom>
                         </div>
