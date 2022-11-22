@@ -17,12 +17,12 @@
 </body>
 </template>
 <script>
-import {useUserStore } from '../stores/user'
+import { useUserStore } from '../stores/user'
 export default {
     data() {
         return {
-            email:"",
-            password:"",
+            email: "",
+            password: "",
         }
     },
     methods: {
@@ -30,7 +30,7 @@ export default {
             await useUserStore().signIn(this.email, this.password)
             console.log(useUserStore().getUser)
         },
-        
+
     }
 
 }

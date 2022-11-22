@@ -1,6 +1,6 @@
 <template lang="">
     <div>
-        Helloworld
+        
     </div>
 </template>
 <script>
