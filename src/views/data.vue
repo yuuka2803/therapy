@@ -4,7 +4,7 @@
         <div class="flex justify-center" style="font-family: 'Roboto Condensed', sans-serif;">
             <div class="text-center text-xl">
                 <div class="pt-10">
-                    <p class="text-6xl pb-5">Data</p>
+                    <p class="text-5xl pb-5 ">Add information</p>
                     <div class="bg-slate-200 p-10 rounded-lg">
                         <form @submit.prevent="">
                             <input class="border-2 mb-2 w-[300px] h-[45px] p-2" type="text" name="firstname" id=""
