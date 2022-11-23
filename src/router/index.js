@@ -2,10 +2,20 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import SignUp from '../views/signup.vue'
 import SignIn from '../views/signIn.vue'
-import Data from '../views/data.vue'
 import Form from '../views/form.vue'
-import Test from '../views/test.vue'
+import History from '../views/history.vue'
+import Scores from '../views/score.vue'
+import { auth } from '../firebase'
+import HomeUser from '../views/HomeUser.vue'
+const user = auth.currentUser
 
+function requiredAuth(to, from, next) {
+  if (user) {
+    next()
+  } else {
+    next({ name: "signin"})
+  }
+}
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,37 +23,60 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
-    },
-    {
-      path: '/data',
-      name: 'data',
-      component: Data
+      component: HomeView,
+      
     },
     {
       path: '/form',
       name: 'form',
-      component: Form
+      component: Form,
+      meta:
+      {
+        layout:'Main'
+      }
+      // beforeEnter: [requiredAuth]
     },
     {
       path: '/signin',
       name: 'signin',
-      component: SignIn
+      component: SignIn,
+      
     },
     {
       path: '/signup',
       name: 'signup',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: SignUp
+      component: SignUp,
     },
     {
-      path: '/test',
-      name: 'test',
-      component: Test
+      path: '/history',
+      name: 'history',
+      component: History,
+      meta:
+      {
+        layout:'Main'
+      }
+      // beforeEnter: [requiredAuth]
     },
-  
+    {
+      path: '/score',
+      name: 'score',
+      component: Scores,
+      meta:
+      {
+        layout:'Main'
+      }
+      // beforeEnter: [requiredAuth]
+    },
+    {
+      path: '/homeuser',
+      name: 'homeuser',
+      component: HomeUser,
+      meta:
+      {
+        layout:'Main'
+      }
+      
+    },
   ]
 })
 

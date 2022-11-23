@@ -1,44 +1,8 @@
 <template lang="">
     <div style="font-family: 'Noto Sans Thai', sans-serif;">
-        <div  class="flex h-[100px] drop-shadow-xl" style="background-color: #d7dbdd">
-            <div class="flex-none w-1/2">
-                <router-link to="/">
-                    <img src="https://i.postimg.cc/SNcM8YC8/logo-depositphotos-bgremover-1.png" width="170" class="m-3">
-                </router-link>
-            </div>
-            <div class="flex-none w-1/2 text-xl">
-                <div class="flex items-stretch justify-end space-x-2">
-                    <router-link to="/form">
-                        <div class="flex-none text-blue-800 font-semibold w-[130px] h-[100px] flex justify-center items-center">
-                            <buttom class="">แบบประเมิน</buttom>
-                        </div>
-                    </router-link>
-                    <router-link to="/">
-                        <div class="flex-none text-blue-800 font-semibold w-[170px] h-[100px] flex justify-center items-center">
-                            <buttom class="">เริ่มกายภาพบำบัด</buttom>
-                        </div>
-                    </router-link>
-                    <router-link to="/test">
-                        <div class="flex-none text-blue-800 font-semibold w-[170px] h-[100px] flex justify-center items-center ">
-                            <buttom>ประวัติการใช้งาน</buttom>
-                        </div>
-                    </router-link>
-                    <router-link to="/signin">
-                        <div class="flex-none mr-5 w-[120px] h-[100px] flex justify-center items-center ">
-                            <buttom class="p-1 w-[105px] text-center border-2 border-black transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300 rounded-3xl">LOG IN</buttom>
-                        </div>
-                    </router-link> 
-                    <router-link to="/">
-                        <div class="flex-none font-semibold w-[50px] h-[100px] flex justify-center items-center mr-6">
-                            <buttom><font-awesome-icon icon="fa-solid fa-house-chimney" class="text-4xl transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300 rounded-3xl"/></buttom>
-                        </div>
-                    </router-link>           
-                </div>
-            </div>
-        </div>
         <div class="flex justify-center h-[325px] m-28 ">
             <div class="flex-none flex items-center mt-16">
-                <div class="flex-none justify-start">
+                <div class="flex-none">
                     <h1 class="text-5xl">ออกแบบโปรแกรมการทำกายภาพบำบัด</h1>
                     <h3 class="text-3xl pt-5">สำหรับผู้ป่วยที่มีภาวะกล้ามเนื้ออ่อนแรงจากโรคหลอดเลือดสมอง</h3>
                     <div class="text-xl pt-6">
@@ -46,14 +10,14 @@
                         <p class="p-1">เป็นการเพิ่มความเชื่อมั่นในการดูแลตนเอง อีกทั้้งยังลดภาระให้กับผู้ดูแล และเก็บสถิติข้อมูลเพื่อประเมินผลสุขภาพ</p>
                         <p class="p-1">ท่านสามารถทดสอบแบบประเมินเพื่อวัดความสามารถในการทำกิจวัตรประจำวัน</p>
                         <div class=" flex items-center pt-10">
-                            <router-link to="/signin">
+                            <router-link to="/form">
                                 <button class="p-3 w-[220px] text-center transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300 rounded-3xl" style="background-color: #EFE4C6">ทำแบบประเมิน</button>
                             </router-link>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="flex-none flex items-start">
+            <div class="flex-none flex justify-start">
                 <img src="https://i.postimg.cc/GpjHMD3s/undraw-pilates-gpdb-1.png" width="500" class="">
             </div>
         </div>
@@ -126,20 +90,16 @@
             </div>
         </div>
         <div class="h-[50px] mt-16" style="background-color: #d7dbdd">
+                
+        </div>
         
     </div>
-        
-    </div>
-    
 </template>
+<script>
+export default {
+
+}
+</script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap');
 </style>
-<script>
-import { useUserStore } from '../stores/user'
-export default {
-    setup() {
-        useUserStore().fetchCurrentUser()
-    },
-}
-</script>

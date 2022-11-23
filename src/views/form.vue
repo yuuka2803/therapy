@@ -1,29 +1,6 @@
 <template lang="">
     <div style="font-family: 'Noto Sans Thai', sans-serif;">
-        <div  class="flex bg-slate-200 h-[100px] ">
-            <div class="flex-none w-1/2">
-                <router-link to="/">
-                    <img src="https://i.postimg.cc/SNcM8YC8/logo-depositphotos-bgremover-1.png" width="170" class="m-3">
-                </router-link>
-            </div>
-            <div class="flex-none w-1/2 text-xl">
-                <div class="flex items-stretch justify-end">
-                    <router-link to="/form">
-                        <div class="flex-none text-blue-800 font-semibold w-[150px] h-[100px] flex justify-center items-center">
-                            <buttom class="">แบบประเมิน</buttom>
-                        </div>
-                    </router-link>
-                    <div class="flex-none text-blue-800 font-semibold w-[150px] h-[100px] flex justify-center items-center ">
-                        <buttom>บันทึกข้อมูล</buttom>
-                    </div>
-                    <router-link to="/signin">
-                        <div class="flex-none mr-5 w-[150px] h-[100px] flex justify-center items-center ">
-                            <buttom class="p-1 w-[105px] text-center border-2 border-black rounded-full">LOG IN</buttom>
-                        </div>
-                    </router-link>              
-                </div>
-            </div>
-        </div>
+
         <div class="text-center">
             <h1 class="text-3xl pt-10 text-blue-800">แบบประเมินกิจวัตรประจำวัน Barthel ADL Index</h1>
             <p class="text-xl pt-5"> แบบประเมินดัชนี Barthel ADL Index เป็นแบบประเมินความสามารถในการทำกิจวัตรประจำวันของผู้สูงอายุ</p>
@@ -206,18 +183,28 @@ export default {
             Poo: 0,
             Toilet: 0,
             Up: 0,
+        }
+    },
+    setup() {
+        useUserStore().fetchCurrentUser()
+    },
+    beforeMount() {
+        console.log(useUserStore().getUser);
+        this.Bath = 0;
+        this.Bed = 0;
+        this.Do = 0;
+        this.Dress = 0;
+        this.Eat = 0;
+        this.Move = 0;
+        this.Pee = 0;
+        this.Poo = 0;
+        this.Toilet = 0;
+        this.Up = 0;
+    },
+    
+}  
 
-        }
-    },
-    mounted() {
-        console.log(this.$data);
-    },
-    methods: {
-        async updatadata() {
-            await useUserStore().updataData(this.$data)
-        }
-    }
-}
+
 </script>
 <style lang="">
     

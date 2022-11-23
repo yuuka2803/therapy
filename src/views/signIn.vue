@@ -25,19 +25,19 @@ export default {
             email: "",
             password: "",
             name: "",
-            age:0,
+            age: 0,
         }
     },
-
+    setup() {
+        useUserStore().fetchCurrentUser()
+    },
     methods: {
         async signin() {
             await useUserStore().signIn(this.email, this.password)
             console.log(useUserStore().getUser.uid)
-            this.$.router.push('')
+            this.$router.push({ name: 'homeuser' })
         },
-
     }
-
 }
 </script>
 <style lang="">
