@@ -23,7 +23,7 @@ import { useUserStore } from '../stores/user'
 export default {
     data() {
         return {
-            score: [],
+            sum: 0
             
         };
     },
@@ -31,19 +31,11 @@ export default {
         useUserStore().fetchCurrentUser()
     },
     async mounted() {
-        await useUserStore().fetchScore();
-        this.score = useUserStore().getScore
-        this.sum = 0;
-        const s = this.score.pop()
-        console.log(s);
-        for (let i in s) {
-            this.sum += parseInt(s[i])
-        }
-        
+        await useUserStore().fetchData();
+        this.sum = useUserStore().getTherapies.pop().score
     },
-    
-    
 }
+
     
 </script>
 <style lang="">

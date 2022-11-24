@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { auth, db } from "@/firebase"
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { doc, setDoc, Timestamp, updateDoc, collection, query, where, getDoc, arrayUnion, } from "firebase/firestore";
+import { doc, setDoc, serverTimestamp, updateDoc,  getDoc, arrayUnion, Timestamp, } from "firebase/firestore";
 
 export const useUserStore = defineStore('user', {
 	state: () => {
@@ -10,17 +10,15 @@ export const useUserStore = defineStore('user', {
 			name: "",
 			age: 0,
 			email: "",
-			scores: [],
-	
-
+			therapies: [],
 		}
 	},
 	getters: {
 		getUser: (state) => state.user,
-		getScore: (state) => state.scores,
+		getTherapies: (state) => state.therapies,
 		getName: (state) => state.name,
 		getAge: (state) => state.age,
-		getEmail:(state) => state.email,
+		getEmail: (state) => state.email,
 	},
 	actions: {
 		async signIn(email, password) {
@@ -53,22 +51,35 @@ export const useUserStore = defineStore('user', {
 				name: name,
 				age: age,
 				email: email,
-				scores: []
+				therapies: []
 			}
 			await setDoc(doc(db, "user", this.user.uid), docData);
 		},
 		async updataData(resultData) {
+			let sum = 0;
+			for (let i in resultData) {
+				sum += parseInt(resultData[i])
+			}
+			const data = {
+				result: resultData,
+				score: sum,
+				date: Date.now()
+			}
+			console.log(data)
 			const userRef = doc(db, "user", this.user.uid);
 			await updateDoc(userRef, {
-				scores: arrayUnion(resultData)
+				therapies: arrayUnion(data)
 			});
 		},
-		async fetchScore() {
+		async fetchData() {
 			// console.log(this.user);
 			const docRef = doc(db, "user", this.user.uid);
 			const docSnap = await getDoc(docRef);
 			if (docSnap.exists()) {
-				this.scores = docSnap.data().scores
+				this.therapies = docSnap.data().therapies
+				this.name = docSnap.data().name
+				this.age = docSnap.data().age
+				this.email = docSnap.data().email
 			} else {
 				console.log("No such document!");
 			}
@@ -103,6 +114,21 @@ export const useUserStore = defineStore('user', {
 			const docSnap = await getDoc(docRef);
 			if (docSnap.exists()) {
 				this.email = docSnap.data().email
+			} else {
+				console.log("No such document!");
+			}
+		},
+		async updataSum(resultData) {
+            const userRef = doc(db, "user", this.user.uid);
+            await updateDoc(userRef, {
+                sum: arrayUnion(resultData)
+            });
+		},
+		async fetchSum() {
+			const docRef = doc(db, "user", this.user.uid);
+			const docSnap = await getDoc(docRef);
+			if (docSnap.exists()) {
+				this.sum = docSnap.data().sum
 			} else {
 				console.log("No such document!");
 			}

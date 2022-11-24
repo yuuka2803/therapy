@@ -201,7 +201,12 @@ export default {
         this.Toilet = 0;
         this.Up = 0;
     },
-    
+    methods: {
+        async updatadata() {
+            await useUserStore().updataData(this.$data)
+            this.$router.push({ name: 'score' });
+        },
+    }
 }  
 
 

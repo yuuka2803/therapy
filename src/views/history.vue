@@ -18,16 +18,13 @@
                 <h1 class="pt-14 text-4xl font-semibold text-center">History</h1>
                 <div class="flex justify-center space-x-[300px]">
                     <div>
-                        <h1 class="pt-14 text-3xl text-center">คะแนนการประเมิน</h1>
-                        <div class="flex justify-center items-center bg-white w-[500px] mt-12 p-8 space-x-[180px] rounded-3xl drop-shadow-2xl">
-                            <div class="flex-none">
-                                <h1 class="text-2xl">Date</h1>
-                                <h1 class="text-xl">23/11/2546</h1>
-                            </div>
-                            <div class="flex-none">
-                                <h1 class="text-2xl">Score</h1>
-                                <h1 class="text-xl">60/100</h1>
-                            </div>
+                    <div v-for="s in therapies" :key="s">
+                       <scoreCard
+                            :score = s.score 
+                            :date = s.date >
+                       </scoreCard>
+                    </div>
+                    <!-- {{ therapies}} -->
                         
                         </div>
                     </div>
@@ -49,33 +46,36 @@
 
             </div>
         </div>
-    </div>
+    
 </template>
 <script>
 import { useUserStore } from '../stores/user'
+import scoreCard from '../components/dataScore.vue'
 export default {
     data() {
         return {
             name: "",
             age: 0,
-            email:""
+            email: "",
+            therapies:[]
         }
+    },
+    components: {
+        scoreCard,
     },
     setup() {
         useUserStore().fetchCurrentUser()
     },
     async mounted() {
-        await useUserStore().fetchName();
+        await useUserStore().fetchData();
         this.name = useUserStore().getName
-  
-        await useUserStore().fetchAge();
         this.age = useUserStore().getAge
-
-        await useUserStore().fetchEmail();
         this.email = useUserStore().getEmail
-    }
+        this.therapies = useUserStore().getTherapies
+        
+    },
 
-    
+
 
 }
 </script>
