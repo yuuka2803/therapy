@@ -4,12 +4,10 @@
             <div class="flex-none w-1/2 flex justify-center">
                 <div>
                     <p class="text-3xl text-center pb-10 mt-16">เริ่มทำกายภาพบำบัด</p>
-                    <div class="bg-neutral-400 w-[400px] h-[400px]"></div>
-                    <div class="flex justify-between">
-                        <div class="flex-none pt-10">
-                            <p class="text-2xl">Count : 10</p>
-                            <p class="text-2xl pt-5 ">ทำครบแล้ว เก่งมาก</p>
-                        </div>
+                                        <div class="">
+                        <iframe src="http://127.0.0.1:5501/pose4.html" frameborder="0" width="400" height="480" allow="camera"></iframe>
+                    </div>
+                    <div class="flex justify-center">
                         <div class="flex-none pt-12">
                             <router-link to="/history">
                                 <button class="p-2 w-[130px] text-center drop-shadow-xl text-lg transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300 rounded-3xl bg-amber-200 ">เสร็จสิ้น</button>
@@ -19,6 +17,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="flex-none w-1/2 flex items-center justify-center">
                 <div class="items-center">
                     <p class="text-3xl text-center pb-8 mt-16">ท่าที่ 4</p>
@@ -39,12 +38,7 @@
     </div>
 </template>
 <script>
-export default {
-    setup() {
-        useUserStore().fetchCurrentUser()
-    },
 
-}
 </script>
 <style lang="">
     

@@ -4,14 +4,12 @@
             <div class="flex-none w-1/2 flex justify-center">
                 <div>
                     <p class="text-3xl text-center pb-10 mt-16">เริ่มทำกายภาพบำบัด</p>
-                    <div class="bg-neutral-400 w-[400px] h-[400px]"></div>
-                    <div class="flex justify-between">
-                        <div class="flex-none pt-10">
-                            <p class="text-2xl">Count : 10</p>
-                            <p class="text-2xl pt-5 ">ทำครบแล้ว เก่งมาก</p>
-                        </div>
+                    <div class="">
+                        <iframe src="http://127.0.0.1:5501/pose3.html" frameborder="0" width="400" height="480" allow="camera"></iframe>
+                    </div>
+                    <div class="flex justify-center">
                         <div class="flex-none pt-12">
-                            <router-link to="/exfour">
+                            <router-link to="/pose4">
                                 <font-awesome-icon icon="fa-solid fa-circle-arrow-right" class="text-5xl drop-shadow-xl transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300"/>
                             </router-link>
                         </div>
@@ -37,12 +35,7 @@
     </div>
 </template>
 <script>
-export default {
-    setup() {
-        useUserStore().fetchCurrentUser()
-    },
 
-}
 </script>
 <style lang="">
     

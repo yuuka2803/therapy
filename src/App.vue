@@ -16,7 +16,7 @@
 							<button class="text-2xl">แบบประเมิน</button>
 						</div>
 					</router-link>
-					<router-link to="/exone">
+					<router-link to="/pose1">
 						<div
 							class="flex-none hover:bg-blue-300/50 text-md w-[170px] h-[100px] flex justify-center items-center">
 							<button class="text-2xl">เริ่มกายภาพบำบัด</button>

@@ -5,10 +5,10 @@
                 <div>
                     <p class="text-3xl text-center pb-10 mt-16">เริ่มทำกายภาพบำบัด</p>
                     <div class="">
-                        <iframe src="http://127.0.0.1:5500/pose1.html" frameborder="0" width="400" height="480" allow="camera"></iframe>
+                        <iframe src="http://127.0.0.1:5501/pose1.html" frameborder="0" width="400" height="480" allow="camera"></iframe>
                     </div>
                     <div class="flex justify-center">
-                        <router-link to="/extwo">
+                        <router-link to="/pose2">
                             <font-awesome-icon icon="fa-solid fa-circle-arrow-right" class="text-5xl drop-shadow-xl transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300"/>
                         </router-link>
                     </div>
@@ -32,12 +32,7 @@
     </div>
 </template>
 <script>
-export default {
-    setup() {
-        useUserStore().fetchCurrentUser()
-    },
 
-}
 </script>
 <style lang="">
     

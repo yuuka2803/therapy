@@ -2,7 +2,7 @@
     <div style="font-family: 'Noto Sans Thai', sans-serif;">
 
         <div class="text-center">
-            <h1 class="text-3xl pt-10 text-blue-800">แบบประเมินกิจวัตรประจำวัน Barthel ADL Index</h1>
+            <h1 class="text-3xl pt-10">แบบประเมินกิจวัตรประจำวัน Barthel ADL Index</h1>
             <p class="text-xl pt-5"> แบบประเมินดัชนี Barthel ADL Index เป็นแบบประเมินความสามารถในการทำกิจวัตรประจำวันของผู้สูงอายุ</p>
             <p class="text-xl pt-2"> ซึ่งเป็นชุดข้อคำถามเกี่ยวกับความสามารถในการช่วยเหลือตนเองในการปฏิบัติกิจวัตรประจำวัน</p>
         </div>
@@ -160,7 +160,7 @@
                     </div>
                 </div>
                 <div class="pt-8 flex justify-center">
-                    <button class="flex justify-center p-3 w-[105px] text-center bg-blue-400 rounded-full">SUBMIT</button>
+                    <button class="flex  text-white drop-shadow-xl justify-center p-3 w-[150px] text-center bg-blue-400 rounded-full" style="background-color:#709892">SUBMIT</button>
                 </div>
                 </form>
             </div>

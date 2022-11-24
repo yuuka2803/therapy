@@ -15,14 +15,22 @@
                 <p v-show="sum>70 " class="pt-5">คุณมีความสามารถในการปฎิบัติกิจวัตรประจำเองได้ </p>
                 <p v-show="sum>70 " class="pt-5">ไม่จำเป็นต้องกายภาพบำบัด </p>
             
-            </div>
+             </div>
         </div>
-        <router-link to="/pose1">
+        <div class="flex justify-center space-x-16">
+        <router-link v-show="sum>=50  "   to="/pose1">
             <div class="pt-16 flex justify-center">
                 <button class="flex justify-center p-3 w-[220px] text-center delay-150 bg-sky-200 hover:-translate-y-1 hover:scale-110 hover:bg-sky-300 duration-300 rounded-full text-xl">เริ่มทำกายภาพบำบัด</button>
             </div>
         </router-link>
+        <router-link v-show="sum<49"   to="/homeuser">
+            <div class="pt-16 flex justify-center">
+                <button class="flex justify-center p-3 w-[220px] text-center delay-150 bg-sky-200 hover:-translate-y-1 hover:scale-110 hover:bg-sky-300 duration-300 rounded-full text-xl">กลับหน้าหลัก</button>
+            </div>
+        </router-link>
+        </div>
     </div>
+
 </template>
 <script>
 import { useUserStore } from '../stores/user'
