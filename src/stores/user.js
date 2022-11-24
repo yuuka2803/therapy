@@ -51,7 +51,8 @@ export const useUserStore = defineStore('user', {
 				name: name,
 				age: age,
 				email: email,
-				therapies: []
+				therapies: [],
+				// display:[]
 			}
 			await setDoc(doc(db, "user", this.user.uid), docData);
 		},
@@ -72,7 +73,6 @@ export const useUserStore = defineStore('user', {
 			});
 		},
 		async fetchData() {
-			// console.log(this.user);
 			const docRef = doc(db, "user", this.user.uid);
 			const docSnap = await getDoc(docRef);
 			if (docSnap.exists()) {
@@ -89,53 +89,16 @@ export const useUserStore = defineStore('user', {
 				this.user = user;
 			});
 		},
-		async fetchName() {
-			// console.log(this.user);
-			const docRef = doc(db, "user", this.user.uid);
-			const docSnap = await getDoc(docRef);
-			if (docSnap.exists()) {
-				this.name = docSnap.data().name
-			} else {
-				console.log("No such document!");
-			}
-		},
-		async fetchAge() {
-			// console.log(this.user);
-			const docRef = doc(db, "user", this.user.uid);
-			const docSnap = await getDoc(docRef);
-			if (docSnap.exists()) {
-				this.age = docSnap.data().age
-			} else {
-				console.log("No such document!");
-			}
-		},
-		async fetchEmail() {
-			const docRef = doc(db, "user", this.user.uid);
-			const docSnap = await getDoc(docRef);
-			if (docSnap.exists()) {
-				this.email = docSnap.data().email
-			} else {
-				console.log("No such document!");
-			}
-		},
-		async updataSum(resultData) {
-            const userRef = doc(db, "user", this.user.uid);
-            await updateDoc(userRef, {
-                sum: arrayUnion(resultData)
-            });
-		},
-		async fetchSum() {
-			const docRef = doc(db, "user", this.user.uid);
-			const docSnap = await getDoc(docRef);
-			if (docSnap.exists()) {
-				this.sum = docSnap.data().sum
-			} else {
-				console.log("No such document!");
-			}
-		},
+		async updataDisplay(resultData) {
+			const userRef = doc(db, "user", this.user.uid);
+			await updateDoc(userRef, {
+				therapies: arrayUnion(resultData)
+			
 		
-		
-		
+			}
+			)
+		}
 	}
 })
+
 

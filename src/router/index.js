@@ -30,10 +30,7 @@ const router = createRouter({
       path: '/form',
       name: 'form',
       component: Form,
-      meta:
-      {
-        layout:'Main'
-      }
+      
       // beforeEnter: [requiredAuth]
     },
     {
@@ -51,30 +48,21 @@ const router = createRouter({
       path: '/history',
       name: 'history',
       component: History,
-      meta:
-      {
-        layout:'Main'
-      }
+      
       // beforeEnter: [requiredAuth]
     },
     {
       path: '/score',
       name: 'score',
       component: Scores,
-      meta:
-      {
-        layout:'Main'
-      }
+      
       // beforeEnter: [requiredAuth]
     },
     {
       path: '/homeuser',
       name: 'homeuser',
       component: HomeUser,
-      meta:
-      {
-        layout:'Main'
-      }
+      
       
     },
   ]
