@@ -24,20 +24,16 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-      
     },
     {
       path: '/form',
       name: 'form',
       component: Form,
-      
-      // beforeEnter: [requiredAuth]
     },
     {
       path: '/signin',
       name: 'signin',
       component: SignIn,
-      
     },
     {
       path: '/signup',
@@ -48,22 +44,16 @@ const router = createRouter({
       path: '/history',
       name: 'history',
       component: History,
-      
-      // beforeEnter: [requiredAuth]
     },
     {
       path: '/score',
       name: 'score',
       component: Scores,
-      
-      // beforeEnter: [requiredAuth]
     },
     {
       path: '/homeuser',
       name: 'homeuser',
       component: HomeUser,
-      
-      
     },
   ]
 })

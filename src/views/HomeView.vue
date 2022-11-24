@@ -1,41 +1,41 @@
 <template lang="">
-    <div style="font-family: 'Noto Sans Thai', sans-serif;">
-        <div  class="flex h-[100px] drop-shadow-xl" style="background-color: #d7dbdd">
-            <div class="flex-none w-1/2">
-                <router-link to="/">
-                    <img src="https://i.postimg.cc/SNcM8YC8/logo-depositphotos-bgremover-1.png" width="170" class="m-3">
+<!-- <div style="font-family: 'Noto Sans Thai', sans-serif;">
+        <div  class="flex h-[100px] drop-shadow-xl" style="background-color: #709892">
+            <div class="flex-none w-1/2 flex items-center justify-start pl-6 text-white">
+                <router-link to="/home">
+                    <div class="flex space-x-3">
+                        <img src="https://i.postimg.cc/8P8mg680/logo.png" width="60" class="flex items-center">
+                        <p class="text-3xl flex items-center font-semibold pt-1">THERAPY FOR STROKE</p>
+                    </div>
                 </router-link>
             </div>
-            <div class="flex-none w-1/2 text-xl">
-                <div class="flex items-stretch justify-end space-x-2">
-                    <router-link to="/form">
-                        <div class="flex-none text-blue-800 font-semibold w-[130px] h-[100px] flex justify-center items-center">
-                            <buttom class="">แบบประเมิน</buttom>
+            <div class="flex-none w-1/2 text-xl text-white">
+                <div class="flex items-stretch justify-end space-x-6">
+                    <router-link to="/signin">
+                        <div class="flex-none hover:bg-blue-300/50 font-medium w-[130px] h-[100px] flex justify-center items-center">
+                            <button class="text-2xl">แบบประเมิน</button>
                         </div>
                     </router-link>
-                    <router-link to="/">
-                        <div class="flex-none text-blue-800 font-semibold w-[170px] h-[100px] flex justify-center items-center">
-                            <buttom class="">เริ่มกายภาพบำบัด</buttom>
-                        </div>
-                    </router-link>
-                    <router-link to="/test">
-                        <div class="flex-none text-blue-800 font-semibold w-[170px] h-[100px] flex justify-center items-center ">
-                            <buttom>ประวัติการใช้งาน</buttom>
+                    <router-link to="/signin">
+                        <div class="flex-none hover:bg-blue-300/50 font-medium w-[170px] h-[100px] flex justify-center items-center">
+                            <button class="text-2xl">เริ่มกายภาพบำบัด</button>
                         </div>
                     </router-link>
                     <router-link to="/signin">
                         <div class="flex-none mr-5 w-[120px] h-[100px] flex justify-center items-center ">
-                            <buttom class="p-1 w-[105px] text-center border-2 border-black transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300 rounded-3xl">LOG IN</buttom>
+                            <button class="p-1 w-[105px] text-center text-white border-2 border-white transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300 rounded-3xl">LOG IN</button>
                         </div>
                     </router-link> 
                     <router-link to="/">
                         <div class="flex-none font-semibold w-[50px] h-[100px] flex justify-center items-center mr-6">
-                            <buttom><font-awesome-icon icon="fa-solid fa-house-chimney" class="text-4xl transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300 rounded-3xl"/></buttom>
+                            <button><font-awesome-icon icon="fa-solid fa-house-chimney" class="text-4xl transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300 rounded-3xl"/></button>
                         </div>
                     </router-link>           
                 </div>
             </div>
         </div>
+        </div> -->
+        
         <div class="flex justify-center h-[325px] m-28 ">
             <div class="flex-none flex items-center mt-16">
                 <div class="flex-none justify-start">
@@ -127,7 +127,6 @@
         </div>
         <div class="h-[50px] mt-16" style="background-color: #d7dbdd">
         
-    </div>
         
     </div>
     
