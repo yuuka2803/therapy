@@ -17,7 +17,7 @@
             
             </div>
         </div>
-        <router-link to="/score">
+        <router-link to="/pose1">
             <div class="pt-16 flex justify-center">
                 <button class="flex justify-center p-3 w-[220px] text-center delay-150 bg-sky-200 hover:-translate-y-1 hover:scale-110 hover:bg-sky-300 duration-300 rounded-full text-xl">เริ่มทำกายภาพบำบัด</button>
             </div>
