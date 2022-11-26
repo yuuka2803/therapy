@@ -1,15 +1,5 @@
 <template>
-        <div class="flex-coll" style="font-family: 'Noto Sans Thai', sans-serif;">
-            <div class="flex justify-end h-[100px]">
-                <router-link to="/">
-                    <div class="w-[50px] h-[100px] m-10">
-                        <buttom>
-                            <font-awesome-icon icon="fa-solid fa-house-chimney"
-                                class="text-4xl transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300" />
-                        </buttom>
-                    </div>
-                </router-link>
-            </div>
+        <div class="flex-coll mt-[80px]" style="font-family: 'Noto Sans Thai', sans-serif;">
             <div class="flex justify-center items-center" style="font-family: 'Noto Sans Thai', sans-serif;">
                 <div class="flex-none flex justify-center items-center mr-10">
                     <img src="https://i.postimg.cc/63RVWXRN/undraw-Mindfulness-re-gth4.png" width="400">

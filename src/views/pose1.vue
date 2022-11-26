@@ -8,9 +8,11 @@
                         <iframe src="http://127.0.0.1:5501/pose1.html" frameborder="0" width="400" height="480" allow="camera"></iframe>
                     </div>
                     <div class="flex justify-center">
+                        <div class="flex-none pt-12">
                         <router-link to="/pose2">
                             <font-awesome-icon icon="fa-solid fa-circle-arrow-right" class="text-5xl drop-shadow-xl transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300"/>
                         </router-link>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -21,18 +23,22 @@
                     <p class="text-2xl pt-10">1. ประสานมือโดยใช้มือด้านมีแรงจับมือด้านที่อ่อนแรงไว้</p>
                     <p class="text-2xl pt-5">2. งอข้อศอกด้านที่อ่อนแรงให้ชิดหัวไหล</p>
                     <p class="text-2xl pt-5">3. แล้วเหยียดให้สุดแขน</p>
+                    <p class="text-2xl pt-5">( ทำจนครบ 5 ครั้ง )</p>
                 </div>
             </div>
         </div>
         <div class="flex justify-end mr-20 mt-4">
-            <router-link to="/home">
+            <router-link to="/">
                 <button class="p-2 w-[180px] text-center text-lg transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300 rounded-3xl text-white drop-shadow-xl"  style="background-color:#709892">ออกจากหน้านี้</button>
             </router-link>
         </div>
     </div>
 </template>
 <script>
+export default {
 
+
+    }
 </script>
 <style lang="">
     

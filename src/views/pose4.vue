@@ -26,12 +26,12 @@
                     <p class="text-xl pt-3">2. ถ่ายน้ำหนักไปขาขวาและยกขาซ้ายเหยียด</p>
                     <p class="text-xl pt-3">3. กวาดเท้ากลับพื้น ยืนบนพื้น</p>
                     <p class="text-xl pt-3">4. ถ่ายน้ำหนักไปทางขาซ้ายและยกขาขวาเหยียด</p>
-                    <p class="text-xl pt-3">5. ทำซ้ำหลายครั้งสลับกัน</p>
+                    <p class="text-2xl pt-5">( ทำจนครบ 5 ครั้ง )</p>
                 </div>
             </div>
         </div>
         <div class="flex justify-end mr-20 mt-4">
-            <router-link to="/home">
+            <router-link to="/">
                 <button class="p-2 w-[180px] text-center text-lg transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300 rounded-3xl drop-shadow-xl text-white" style="background-color:#709892">ออกจากหน้านี้</button>
             </router-link>
         </div>

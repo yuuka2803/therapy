@@ -129,10 +129,39 @@
         </div>
         
     </div>
+    
 </template>
 <script>
-export default {
 
+import { useUserStore } from '@/stores/user'
+export default {
+    name: 'HomeUser',
+    data() {
+        return {
+            isVisible: false,
+            name: ''
+        }
+    },
+    methods: {
+        toggleVisibility() {
+            this.isVisible = !this.isVisible
+        }
+    },
+    setup() {
+        useUserStore().fetchCurrentUser()
+    },
+    computed: {
+        isLogin() {
+            return (useUserStore().getName) ? true : false
+        },
+    },
+    async created() {
+        await useUserStore().fetchData();
+        this.name = useUserStore().getName;
+    },
+    updated() {
+        console.log("check")
+    },
 }
 </script>
 <style>

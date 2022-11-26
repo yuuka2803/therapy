@@ -28,18 +28,21 @@
                         
                         </div>
                     </div>
-                    <div>
+                    <div class="justify-center">
                         <h1 class="pt-14 text-3xl text-center">การทำกายภาพบำบัด</h1>
-                        <div class="flex justify-center items-center bg-white w-[500px] mt-12 p-8 space-x-[180px] rounded-3xl drop-shadow-2xl">
+                        <div class="flex justify-center items-center">
+                            <div class="flex justify-center items-center bg-white w-[500px] mt-12 p-8 space-x-[180px] rounded-3xl drop-shadow-2xl">
                             <div class="flex-none">
                                 <h1 class="text-2xl">Date</h1>
-                                <h1 class="text-xl">23/11/2546</h1>
+                                <h1 class="text-xl">25/11/2565</h1>
                             </div>
                             <div class="flex-none">
                                 <h1 class="text-2xl">COMPLETE!!</h1>
                             </div>
                         
                         </div>
+                        </div>
+                        
                     </div>
                     
                 </div>

@@ -24,11 +24,12 @@
                     <p class="text-2xl pt-10">1. ให้แขนด้านอ่อนแรงวางอยู่บนกองอยู่บนผ้าหรือกองหนังสือโต๊ะ</p>
                     <p class="text-2xl pt-5">2. ใช้มือด้านมีแรงจับมือด้านอ่อนแรงแล้วยกขึ้น</p>
                     <p class="text-2xl pt-5">3. จากนั้นยกลง</p>
+                    <p class="text-2xl pt-5">( ทำจนครบ 5 ครั้ง )</p>
                 </div>
             </div>
         </div>
         <div class="flex justify-end mr-20 mt-4">
-            <router-link to="/home">
+            <router-link to="/">
                 <button class="p-2 w-[180px] text-center text-lg transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300 rounded-3xl drop-shadow-xl text-white" style="background-color:#709892">ออกจากหน้านี้</button>
             </router-link>
         </div>

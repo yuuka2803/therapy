@@ -10,7 +10,7 @@
                         <p class="p-1">เป็นการเพิ่มความเชื่อมั่นในการดูแลตนเอง อีกทั้้งยังลดภาระให้กับผู้ดูแล และเก็บสถิติข้อมูลเพื่อประเมินผลสุขภาพ</p>
                         <p class="p-1">ท่านสามารถทดสอบแบบประเมินเพื่อวัดความสามารถในการทำกิจวัตรประจำวัน</p>
                         <div class=" flex items-center pt-10">
-                            <router-link to="/form">
+                            <router-link to="/signin">
                                 <button class="p-3 w-[220px] drop-shadow-xl text-center text-white transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300 rounded-3xl" style="background-color:#709892">ทำแบบประเมิน</button>
                             </router-link>
                         </div>
